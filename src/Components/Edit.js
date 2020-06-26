@@ -6,19 +6,28 @@ class Edit extends Component {
     constructor(props) {
         super(props);
         this.state ={
-            date: this.props.behavior.date,
-            place: this.props.behavior.place,
-            behavior: this.props.behavior.behavior
+            date: '',
+            place: '',
+            behavior: ''
         }
     }
 
+
+
     render() {
+        
+        // const {behavior} = this.props.behavior;
+        console.log(this.props.behavior.id)
         return(
-            <div>
-                <section className='tracked-behavior-display'>
-                    <h4>Date: {this.state.date}</h4>
-                    <h3>Place: {this.state.place}</h3>
-                    <h4>Behavior: {this.state.behavior}</h4>
+            <div className='tracked-container'>
+                <section className='tracked-behavior'>
+                    <h4>Date: {this.props.behavior.date} </h4> 
+                    <h4>Place: {this.props.behavior.place}</h4>
+                    <h4>Behavior: {this.props.behavior.behavior}</h4>
+                    <section className='buttons'>
+                        <button>Edit</button>
+                        <button onClick={ () => this.props.deleteFn(this.props.behavior.id)}>Delete</button>
+                    </section>
                 </section>
             </div>
         )
