@@ -1,6 +1,36 @@
+.App {
+    background-image: url('https://i.picsum.photos/id/1019/5472/3648.jpg?hmac=2mFzeV1mPbDvR0WmuOWSiW61mf9DDEVPDL0RVvg1HPs');
+    background-size: cover;
+}
+
 header {
     text-align: center;
 }
 .profile-pic {
     width: 85px;
+}
+
+.tracked-container {
+    display: flex;
+    justify-content: center;
+
+}
+.tracked-behavior {
+    width: 600px;
+    height: 200px;
+    background: rgb(240, 232, 232);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
 }
