@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import Form from './Components/Form';
 import Header from './Components/Header';
+import Tracked from './Components/Tracked';
 import axios from 'axios';
 import './App.css';
 
@@ -60,6 +61,9 @@ render() {
   return (
     <div>
       <Header />
+      <Tracked
+        behaviorLog={this.state.behaviorLog}
+        />
     </div>
   )
 }
