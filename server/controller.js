@@ -28,6 +28,37 @@ module.exports = {
     displayBehaviors: (req, res) => {
         console.log(req.params)
         res.status(200).send(behaviors);
+    },
+
+    deleteBehavior: (req, res) => {
+        const {id} = req.params;
+
+        const index = behaviors.findIndex(e => e.id === +id);
+        behaviors.splice(index , 1);
+        res.status(200).send(behaviors);
+    },
+
+    postBehavior: (req, res) => {
+        // console.log(req.body)
+
+        req.body.id = id;
+        id++
+
+        behaviors.push(req.body);
+        res.status(200).send(behaviors);
+    },
+
+    editBehavior: (req, res) => {
+        const {id} = req.params;
+
+
+        const index = behaviors.findIndex(e => e.id === +id);
+        behaviors[index].date = req.body.date;
+        behaviors[index].place = req.body.place;
+        behaviors[index].behavior = req.body.behavior;
+
+        res.status(200).send(behaviors);
+
     }
 }
 
