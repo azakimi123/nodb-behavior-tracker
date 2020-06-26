@@ -46,7 +46,7 @@ class App extends Component {
 
   //going to pass this as prop to Edit.js and update App.js state
   deleteBehavior = (id) => {
-    axios.delete(`/api/behaviors/${id}`)
+    axios.delete(`/api/behavior/${id}`)
     .then(res => {
       this.setState({behaviorLog: res.data})
     })
@@ -59,11 +59,11 @@ class App extends Component {
 render() {
   // console.log(this.state.behaviorLog[0])
   return (
-    <div>
+    <div className='App'>
       <Header />
       <Tracked
         behaviorLog={this.state.behaviorLog}
-        />
+        deleteFn={this.deleteBehavior}/>
     </div>
   )
 }
