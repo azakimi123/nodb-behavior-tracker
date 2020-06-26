@@ -40,6 +40,7 @@ module.exports = {
 
     postBehavior: (req, res) => {
         // console.log(req.body)
+        const {info} = req.body;
 
         req.body.id = id;
         id++
@@ -50,12 +51,15 @@ module.exports = {
 
     editBehavior: (req, res) => {
         const {id} = req.params;
+        const {date} = req.body;
+        const {place} = req.body;
+        const {behavior} =req.body;
 
 
         const index = behaviors.findIndex(e => e.id === +id);
-        behaviors[index].date = req.body.date;
-        behaviors[index].place = req.body.place;
-        behaviors[index].behavior = req.body.behavior;
+        behaviors[index].date = date;
+        behaviors[index].place = place;
+        behaviors[index].behavior = behavior;
 
         res.status(200).send(behaviors);
 
