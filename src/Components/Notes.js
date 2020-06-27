@@ -68,3 +68,26 @@
 // }
 
 // export default Form;
+
+
+//Ternary for toggle edit
+{this.state.editing
+    ? (
+        <div>
+            <input
+            value={this.state.date}/>
+            <input
+            value={this.state.place}
+            onChange={e => this.handlePlaceInput(e.target.value)}/>
+            <input
+            value={this.state.behavior}/>
+        </div>
+    )
+    : (
+        <div>
+            <button 
+            className='edit-button'
+            onClick={ () => this.handleToggle}>
+            Edit</button>
+        </div>
+    )}
