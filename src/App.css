@@ -7,7 +7,11 @@ header {
     width: 85px;
 }
 
-
+.tracked-behavior-display{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .tracked-container {
     display: flex;
     justify-content: center;
