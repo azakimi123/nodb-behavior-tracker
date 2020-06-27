@@ -26,7 +26,7 @@ let id = 4;
 
 module.exports = {
     displayBehaviors: (req, res) => {
-        console.log(req.params)
+        // console.log(req.params)
         res.status(200).send(behaviors);
     },
 
@@ -39,8 +39,8 @@ module.exports = {
     },
 
     postBehavior: (req, res) => {
-        // console.log(req.body)
-        const {info} = req.body;
+        console.log(req.body)
+
 
         req.body.id = id;
         id++
