@@ -207,3 +207,108 @@ header {
     bottom: 138px;
     right: 50px;
 }
+
+/*edit-form styling*/
+.edit-tracked-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.edit-tracked-behavior {
+    width: 600px;
+    height: 200px;
+    background: rgb(118, 193, 255);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* flex-direction: column; */
+    margin: 15px;
+    padding: 10px;
+    position: relative;
+    top: 55px;
+    right: 98px;
+    border-style: solid;
+    border-width: 5px;
+    z-index: 2;
+
+}
+
+.edit-top-row {
+    width: 600px;
+    height: 50px;
+    /* background: purple; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: -40px;
+    left: 310px;
+}
+
+.edit-bottom-row {
+    width: 650px;
+    height: 100px;
+    /* background: purple; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    right: 230px;
+}
+
+.edit-date {
+    width: 300px;
+    height: 30px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-right: 20px;
+    margin-bottom: 90px;
+    border: solid;
+    padding: 2px;
+}
+
+.edit-place  {
+    width: 200px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    margin-right: 20px;
+    box-sizing: border-box;
+    margin-bottom: 90px;
+    border: solid;
+}
+
+.edit-submit-button {
+    margin-bottom: 70px;
+    margin-left: 10px;
+    margin-right: 30px;
+    position: relative;
+    right: 30px;
+    bottom: 100px;
+}
+
+.edit-behavior {
+    width: 600px;
+    height: 150px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    border: solid;
+    padding: 5px;
+    margin-bottom: 70px;
+}
+.edit-behavior {
+    width: 600px;
+    height: 150px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    border: solid;
+    padding: 5px;
+    margin-bottom: 70px;
+}

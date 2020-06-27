@@ -48,32 +48,32 @@ handleBehavior = input => {
             ? 
             (
               <div>
-                <div className="tracked-container">
-                  <form className="tracked-behavior">
-                    <section className="top-row">
+                <div className="edit-tracked-container">
+                  <form className="edit-tracked-behavior">
+                    <section className="edit-top-row">
                       <DatePicker
-                        className="date"
+                        className="edit-date"
                         selected={this.state.date}
                         onChange={this.handleDate}
                         showTimeSelect
                         dateFormat="Pp"
                       />
                       <input
-                        className="place"
+                        className="edit-place"
                         placeholder="Place"
                         value={this.state.place}
                         onChange={(e) => this.handlePlace(e.target.value)}
                       />
                     </section>
-                    <div className="bottom-row">
+                    <div className="edit-bottom-row">
                       <textarea
-                        className="behavior"
+                        className="edit-behavior"
                         placeholder="Enter Behavior"
                         value={this.state.behavior}
                         onChange={(e) => this.handleBehavior(e.target.value)}
                       />
                       <button
-                        className="submit-button"
+                        className="edit-submit-button"
                         onClick={() =>
                           this.props.editFn(this.props.behavior.id, date, place, behavior)
                         }
