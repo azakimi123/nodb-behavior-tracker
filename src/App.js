@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-// import Form from './Components/Form';
 import Header from './Components/Header';
 import Tracked from './Components/Tracked';
+import Form from './Components/Form';
 import axios from 'axios';
 import './App.css';
 
@@ -23,12 +23,20 @@ class App extends Component {
   }
 
   //going to pass this function as a prop to Form.js and update App.js state
-  postBehavior = (info) => {
-    axios.post('/api/behaviors', {info: info})
+  postBehavior = (inDate, inPlace, inBehavior) => {
+    // let date = {date:inDate};
+    // let place = {place:inPlace};
+    // let behavior = {behavior:inBehavior};
+
+    axios.post('/api/behavior', {
+      date: inDate,
+      place: inPlace,
+      behavior: inBehavior
+    })
     .then(res => {
       this.setState({behaviorLog: res.data})
     })
-    .catch(err => console.log(err));
+    .catch(err => console.log('what are you thinking!'));
   }
 
   //going to pass this as prop to Edit.js and update App.js state
@@ -61,6 +69,8 @@ render() {
   return (
     <div className='App'>
       <Header />
+      <Form 
+        postBehaviorFn={this.postBehavior}/>
       <Tracked
         behaviorLog={this.state.behaviorLog}
         deleteFn={this.deleteBehavior}/>
