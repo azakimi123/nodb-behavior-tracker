@@ -34,7 +34,7 @@ class Form extends Component {
 
         return(
             <div>
-                <h2 className='form-title'>Behavior Observation Form</h2>
+                <h2 className='form-title'>BEHAVIOR OBSERVATION FORM</h2>
                 <div className='form-container'>
                     <form className='form-behavior-card'>
                         <section className='form-top-row'>

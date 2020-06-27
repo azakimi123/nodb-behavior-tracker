@@ -10,8 +10,12 @@ const Tracked = (props) => {
         editFn={props.editFn}/>
   ))
     return (
-        <div className='tracked-behavior-display'>
-            {mappedBehaviors}
+        <div>
+            <h2 className='form-title'>BEHAVIOR LOG</h2>
+            <section className='tracked-behavior-display'>
+
+                {mappedBehaviors}
+            </section>
         </div>
     )
 }

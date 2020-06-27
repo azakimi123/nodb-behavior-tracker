@@ -133,7 +133,7 @@ header {
 }
 .form-behavior-card {
     width: 600px;
-    height: 250px;
+    height: 200px;
     background: rgb(118, 193, 255);
     display: flex;
     justify-content: space-evenly;
