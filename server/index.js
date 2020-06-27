@@ -13,7 +13,7 @@ app.get('/api/behaviors', ctrl.displayBehaviors);
 
 app.delete('/api/behavior/:id', ctrl.deleteBehavior);
 
-app.post('/api/behaviors', ctrl.postBehavior);
+app.post('/api/behavior', ctrl.postBehavior);
 
 app.put('/api/behavior/:id', ctrl.editBehavior);
 
