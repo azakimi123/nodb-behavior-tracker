@@ -34,22 +34,32 @@ class Form extends Component {
 
         return(
             <div>
-                <form>
-                    <DatePicker 
-                        selected={this.state.date} 
-                        onChange={this.handleDate} 
-                        showTimeSelect
-                        dateFormat="Pp"/>
-                    <input
-                    placeholder='Place'
-                    value={this.state.place}
-                    onChange={ e => this.handlePlace(e.target.value)}/>
-                    <textarea
-                        placeholder='Enter Behavior'
-                        value={this.state.behavior}
-                        onChange={e => this.handleBehavior(e.target.value)}/>
-                    <button onClick={ () => this.props.postBehaviorFn(date, place, behavior)}>Submit</button>
-                </form>
+                <h2 className='form-title'>Behavior Observation Form</h2>
+                <div className='form-container'>
+                    <form className='form-behavior-card'>
+                        <section className='form-top-row'>
+                            <DatePicker
+                                className='form-date' 
+                                selected={this.state.date} 
+                                onChange={this.handleDate} 
+                                showTimeSelect
+                                dateFormat="Pp"/>
+                            <input
+                                className='form-place'
+                                placeholder='Place'
+                                value={this.state.place}
+                                onChange={ e => this.handlePlace(e.target.value)}/>
+                        </section>
+                        <div className='form-bottom-row'>
+                            <textarea
+                                className='form-behavior'
+                                placeholder='Enter Behavior'
+                                value={this.state.behavior}
+                                onChange={e => this.handleBehavior(e.target.value)}/>
+                            <button className='submit-button' onClick={ () => this.props.postBehaviorFn(date, place, behavior)}>Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         )
     }
