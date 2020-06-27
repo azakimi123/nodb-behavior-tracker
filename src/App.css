@@ -1,7 +1,4 @@
-.App {
-    background-image: url('https://i.picsum.photos/id/1019/5472/3648.jpg?hmac=2mFzeV1mPbDvR0WmuOWSiW61mf9DDEVPDL0RVvg1HPs');
-    background-size: cover;
-}
+
 
 header {
     text-align: center;
@@ -9,6 +6,7 @@ header {
 .profile-pic {
     width: 85px;
 }
+
 
 .tracked-container {
     display: flex;
@@ -18,16 +16,86 @@ header {
 .tracked-behavior {
     width: 600px;
     height: 200px;
-    background: rgb(240, 232, 232);
+    background: rgb(118, 193, 255);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
+    /* flex-direction: column; */
     margin: 15px;
     padding: 10px;
     border-style: solid;
     border-width: 5px;
 
+}
+
+.top-row {
+    width: 600px;
+    height: 50px;
+    /* background: purple; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: -55px;
+    left: 335px;
+
+}
+.bottom-row {
+    width: 650px;
+    height: 100px;
+    /* background: purple; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    right: 266px;
+}
+.date {
+    width: 300px;
+    height: 30px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-right: 20px;
+    margin-bottom: 90px;
+    border: solid;
+    padding: 2px;
+}
+.place  {
+    width: 200px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    margin-right: 20px;
+    box-sizing: border-box;
+    margin-bottom: 90px;
+    border: solid;
+}
+.edit-button {
+    margin-bottom: 70px;
+    margin-left: 10px;
+    margin-right: 30px;
+    position: relative;
+    right: -18px;
+}
+.delete-button{
+    margin-bottom: 230px;
+    right: 60px;
+    position: relative;
+}
+.behavior {
+    width: 600px;
+    height: 150px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    border: solid;
+    padding: 5px;
+    margin-bottom: 70px;
 }
 
 .buttons {

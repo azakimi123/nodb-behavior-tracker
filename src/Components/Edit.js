@@ -21,12 +21,16 @@ class Edit extends Component {
         return(
             <div className='tracked-container'>
                 <section className='tracked-behavior'>
-                    <h4>Date: {this.props.behavior.date} </h4> 
-                    <h4>Place: {this.props.behavior.place}</h4>
-                    <h4>Behavior: {this.props.behavior.behavior}</h4>
+                    <div className='top-row'>
+                        <h4 className='date'>Date: {this.props.behavior.date} </h4> 
+                        <h4 className='place'>Place: {this.props.behavior.place}</h4>
+                        <button className='edit-button'>Edit</button>
+                    </div>
+                    <div className='bottom-row'>
+                        <h4 className='behavior'>Behavior: {this.props.behavior.behavior}</h4>
+                        <button className='delete-button' onClick={ () => this.props.deleteFn(this.props.behavior.id)}>Delete</button>
+                    </div>
                     <section className='buttons'>
-                        <button>Edit</button>
-                        <button onClick={ () => this.props.deleteFn(this.props.behavior.id)}>Delete</button>
                     </section>
                 </section>
             </div>
