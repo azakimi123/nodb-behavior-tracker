@@ -6,7 +6,8 @@ const Tracked = (props) => {
     <Edit 
         key={index} 
         behavior={behavior}
-        deleteFn={props.deleteFn}/>
+        deleteFn={props.deleteFn}
+        editFn={props.editFn}/>
   ))
     return (
         <div className='tracked-behavior-display'>
