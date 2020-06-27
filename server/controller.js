@@ -50,10 +50,11 @@ module.exports = {
     },
 
     editBehavior: (req, res) => {
+        console.log(req.body)
         const {id} = req.params;
         const {date} = req.body;
         const {place} = req.body;
-        const {behavior} =req.body;
+        const {behavior} = req.body;
 
 
         const index = behaviors.findIndex(e => e.id === +id);
