@@ -75,11 +75,13 @@ render() {
     <div className='App'>
       <Header />
       <Form 
-        postBehaviorFn={this.postBehavior}/>
-      <Tracked
-        behaviorLog={this.state.behaviorLog}
-        deleteFn={this.deleteBehavior}
-        editFn={this.editBehavior}/>
+          postBehaviorFn={this.postBehavior}/>
+      <body className='body-container'>
+        <Tracked
+          behaviorLog={this.state.behaviorLog}
+          deleteFn={this.deleteBehavior}
+          editFn={this.editBehavior}/>
+      </body>
     </div>
   )
 }

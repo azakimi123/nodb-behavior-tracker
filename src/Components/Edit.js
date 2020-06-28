@@ -7,6 +7,7 @@ class Edit extends Component {
     super(props);
     this.state = {
       editing: false,
+      show: true,
       date: new Date(),
       place: "",
       behavior: ""
@@ -25,9 +26,14 @@ handleBehavior = input => {
     this.setState({behavior: input})
 }
 
-  handleToggle = () => {
+handleToggle = () => {
+    this.handleShow()
     this.setState({ editing: !this.state.editing });
-  };
+}
+
+handleShow = () => {
+    this.setState({show: false});
+}
 
   render() {
     const date = this.state.date;
@@ -39,11 +45,29 @@ handleBehavior = input => {
 
 
     return (
+    <div>
       <div className="tracked-container">
-        <section className="tracked-behavior">
-          <div className="top-row">
-            <h4 className="date">Date: {this.props.behavior.date} </h4>
-            <h4 className="place">Place: {this.props.behavior.place}</h4>
+          {
+              this.state.show?
+                <section className="tracked-behavior">
+                <div className="top-row">
+                    <h4 className="date">Date: {this.props.behavior.date} </h4>
+                    <h4 className="place">Place: {this.props.behavior.place}</h4>
+                </div>
+                <div className="bottom-row">
+                <h4 className="behavior">
+                    Behavior: {this.props.behavior.behavior}
+                </h4>
+                <button
+                    className="delete-button"
+                    onClick={() => this.props.deleteFn(this.props.behavior.id)}>
+                    Delete
+                </button>
+                </div>
+                </section>
+                : null
+          }
+              
             {this.state.editing 
             ? 
             (
@@ -78,7 +102,7 @@ handleBehavior = input => {
                           this.props.editFn(this.props.behavior.id, date, place, behavior)
                         }
                       >
-                        Submit
+                        Update
                       </button>
                     </div>
                   </form>
@@ -98,20 +122,8 @@ handleBehavior = input => {
             )}
             {/* <button onClick={ () => this.handleToggle()} className='edit-button'>Edit</button> */}
           </div>
-          <div className="bottom-row">
-            <h4 className="behavior">
-              Behavior: {this.props.behavior.behavior}
-            </h4>
-            <button
-              className="delete-button"
-              onClick={() => this.props.deleteFn(this.props.behavior.id)}
-            >
-              Delete
-            </button>
-          </div>
-          <section></section>
-        </section>
-      </div>
+    </div>
+      
     );
   }
 }
