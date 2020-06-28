@@ -9,8 +9,8 @@ class Edit extends Component {
       editing: false,
       show: true,
       date: new Date(),
-      place: "",
-      behavior: ""
+      place: this.props.behavior.place,
+      behavior: this.props.behavior.behavior
     };
   }
 
