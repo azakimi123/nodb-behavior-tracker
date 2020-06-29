@@ -25,9 +25,6 @@ class App extends Component {
 
   //going to pass this function as a prop to Form.js and update App.js state
   postBehavior = (inDate, inPlace, inBehavior) => {
-    // let date = {date:inDate};
-    // let place = {place:inPlace};
-    // let behavior = {behavior:inBehavior};
 
     axios.post('/api/behavior', {
       date: inDate,
@@ -42,9 +39,6 @@ class App extends Component {
 
   //going to pass this as prop to Edit.js and update App.js state
   editBehavior = (id, newDate, newPlace, newBehavior) => {
-    // let date = {date: newDate};
-    // let place = {place: newPlace};
-    // let behavior = {behavior: newBehavior};
 
     axios.put(`/api/behavior/${id}`, {
       date: newDate,

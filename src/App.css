@@ -2,6 +2,7 @@
     background-image: url('https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-size: cover;
     overflow: hidden;
+    font-family: sans-serif;
 }
 
 header {
@@ -286,7 +287,7 @@ header {
     justify-content: center;
     box-sizing: border-box;
     margin-right: 20px;
-    margin-bottom: 90px;
+    margin-bottom: 105px;
     border: solid;
     padding: 2px;
 }
@@ -335,4 +336,5 @@ header {
 .copyright {
     text-align: right;
     margin-right: 20px;
+    color: white;
 }

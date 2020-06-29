@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
+import Edit from './Edit';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { getMonth } from 'date-fns';
+// import {format} from 'date-fns';
+
 
 
 class Form extends Component {
@@ -14,7 +18,10 @@ class Form extends Component {
     }
 
     handleDate = val => {
-        this.setState({date: val});
+        let month = this.state.val.getMonth() + 1;
+        month = month < 10 ? `0${month}` : month;
+
+        this.setState({date: month});
     }
 
     handlePlace = input => {
@@ -30,7 +37,9 @@ class Form extends Component {
         const date = this.state.date;
         const place = this.state.place;
         const behavior = this.state.behavior;
-        console.log(behavior)
+        let month = date.getMonth() + 1;
+        month = month < 10 ? `0${month}` : month;
+        console.log(month)
 
         return(
             <div>
@@ -38,12 +47,16 @@ class Form extends Component {
                 <div className='form-container'>
                     <form className='form-behavior-card'>
                         <section className='form-top-row'>
+                            {/* <input
+                            value={this.state.date}
+                            className='form-date'
+                            onChange={ e => this.handlePlace(e.target.value)}/> */}
                             <DatePicker
                                 className='form-date' 
                                 selected={this.state.date} 
                                 onChange={this.handleDate} 
                                 showTimeSelect
-                                dateFormat="Pp"/>
+                                dateFormat="PPp"/>
                             <input
                                 className='form-place'
                                 placeholder='Place'

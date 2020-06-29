@@ -8,14 +8,14 @@ class Edit extends Component {
     this.state = {
       editing: false,
       show: true,
-      date: new Date(),
+      date: this.props.behavior.date,
       place: this.props.behavior.place,
       behavior: this.props.behavior.behavior
     };
   }
 
-handleDate = val => {
-    this.setState({date: val});
+handleDate =  () => {
+    this.setState({date: this.props.behavior.date});
 }
 
 handlePlace = input => {
@@ -75,13 +75,15 @@ handleShow = () => {
                 <div className="edit-tracked-container">
                   <form className="edit-tracked-behavior">
                     <section className="edit-top-row">
-                      <DatePicker
+                      <p className="edit-date" 
+                      onChange={this.handleDate}>{this.props.behavior.date}</p>
+                      {/* <DatePicker
                         className="edit-date"
                         selected={this.state.date}
                         onChange={this.handleDate}
                         showTimeSelect
                         dateFormat="Pp"
-                      />
+                      /> */}
                       <input
                         className="edit-place"
                         placeholder="Place"
@@ -111,7 +113,7 @@ handleShow = () => {
             ) 
             : 
             (
-              <div>
+              <div className='space'>
                 <button
                   className="edit-button"
                   onClick={() => this.handleToggle()}

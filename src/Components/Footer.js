@@ -5,7 +5,7 @@ const Footer = () => {
         <div>
             <footer>
                 <div className="copyright" >
-                    <p>Handcrafted ©2020  BEHAVIOR TRACKER APP</p>
+                    <p>©2020  BEHAVIOR TRACKER APP</p>
                 </div>
             </footer>
         </div>
