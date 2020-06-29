@@ -12,8 +12,8 @@ const Tracked = (props) => {
     return (
         <div>
             <h2 className='form-title'>BEHAVIOR LOG</h2>
-            <section className='tracked-behavior-display'>
-
+            <section 
+                className='tracked-behavior-display'>
                 {mappedBehaviors}
             </section>
         </div>

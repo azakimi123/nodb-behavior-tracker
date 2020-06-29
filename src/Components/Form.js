@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Edit from './Edit';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { getMonth } from 'date-fns';
+// import { getMonth } from 'date-fns';
 // import {format} from 'date-fns';
 
 
@@ -18,10 +18,10 @@ class Form extends Component {
     }
 
     handleDate = val => {
-        let month = this.state.val.getMonth() + 1;
-        month = month < 10 ? `0${month}` : month;
+        // let month = this.state.val.getMonth() + 1;
+        // month = month < 10 ? `0${month}` : month;
 
-        this.setState({date: month});
+        this.setState({date: val});
     }
 
     handlePlace = input => {
@@ -37,9 +37,10 @@ class Form extends Component {
         const date = this.state.date;
         const place = this.state.place;
         const behavior = this.state.behavior;
-        let month = date.getMonth() + 1;
-        month = month < 10 ? `0${month}` : month;
-        console.log(month)
+        //date format and functionality
+        // let month = date.getMonth() + 1;
+        // month = month < 10 ? `0${month}` : month;
+        // console.log(month)
 
         return(
             <div>
