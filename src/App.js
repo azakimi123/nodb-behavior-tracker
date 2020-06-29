@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Components/Header';
 import Tracked from './Components/Tracked';
 import Form from './Components/Form';
+import Footer from './Components/Footer';
 import axios from 'axios';
 import './App.css';
 
@@ -76,12 +77,15 @@ render() {
       <Header />
       <Form 
           postBehaviorFn={this.postBehavior}/>
-      <body className='body-container'>
+      <main className='body-container'>
         <Tracked
           behaviorLog={this.state.behaviorLog}
           deleteFn={this.deleteBehavior}
           editFn={this.editBehavior}/>
-      </body>
+      </main>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   )
 }
